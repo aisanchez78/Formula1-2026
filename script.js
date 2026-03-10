@@ -15,3 +15,15 @@ likeButtons.forEach(button => {
         setTimeout(() => button.style.transform = "scale(1)", 100);
     });
 });
+function toggleInfo(id) {
+    const infoDiv = document.getElementById(id);
+    const button = event.target;
+
+    if (infoDiv.style.display === "none") {
+        infoDiv.style.display = "block";
+        button.innerText = "Cerrar detalles";
+    } else {
+        infoDiv.style.display = "none";
+        button.innerText = "Detalles técnicos";
+    }
+}
