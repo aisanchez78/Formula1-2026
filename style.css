@@ -64,3 +64,52 @@ h2 {
     background: var(--f1-red);
     color: white;
 }
+.post {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Para que la imagen respete los bordes redondeados */
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-bottom: 4px solid var(--f1-red);
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.read-more {
+    background: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.extra-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
