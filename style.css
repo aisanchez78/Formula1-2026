@@ -1,0 +1,66 @@
+:root {
+    --f1-red: #e10600;
+    --dark-bg: #15151e;
+    --card-bg: #ffffff;
+    --text-color: #38383f;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--f1-red);
+}
+
+#blog-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.post {
+    background: var(--card-bg);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: var(--f1-red);
+    margin-top: 0;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.like-btn {
+    background: none;
+    border: 1px solid var(--f1-red);
+    color: var(--f1-red);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.like-btn:hover {
+    background: var(--f1-red);
+    color: white;
+}
