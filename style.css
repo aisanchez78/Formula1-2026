@@ -19,30 +19,23 @@ header {
     padding: 2rem;
     text-align: center;
     border-bottom: 5px solid var(--f1-red);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-#blog-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.post {
-    background: var(--card-bg);
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.post:hover {
-    transform: translateY(-5px);
-}
 
 h2 {
     color: var(--f1-red);
     margin-top: 0;
+}
+
+.post-header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--f1-red);
 }
 
 .date {
@@ -73,6 +66,8 @@ h2 {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    /* Ajuste del grid para que no ocupe todo el ancho */
+    flex: 3; /* Toma el 75% del espacio */
 }
 
 /* Estilo de la Tarjeta */
@@ -125,15 +120,7 @@ h2 {
     align-items: center;
 }
 
-/* Info adicional inicialmente oculta */
-.extra-content {
-    display: none;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px dashed #ccc;
-    font-size: 0.9rem;
-    color: #555;
-}
+
 .search-box {
     text-align: center;
     margin: 30px 0;
@@ -228,4 +215,62 @@ blockquote cite {
     margin-top: 0;
     color: #e10600;
     text-transform: uppercase;
+}
+
+/* Layout de dos columnas */
+.content-wrapper {
+    display: flex;
+    max-width: 1400px; /* Un poco más ancho para que quepa el lateral */
+    margin: 0 auto;
+    gap: 20px;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+
+.sidebar {
+    flex: 1;
+    max-width: 200px;
+    position: sticky;
+    /* Se queda a 120px del techo para no pegarse a la cabecera fija */
+    top: 200px;
+}
+
+.author-static {
+
+    /* Estética distinta: fondo oscuro y bordes industriales */
+    background-color: #1a1a1a !important; 
+    color: #eee !important;
+    border: 2px solid #333;
+    border-radius: 0px; /* Quitamos redondeado para un look más técnico */
+    padding: 30px;
+    box-shadow: 10px 10px 0px var(--f1-red); /* Sombra sólida tipo cómic/técnico */
+}
+
+
+
+.author-name {
+    font-family: 'Orbitron', sans-serif; /* Si usas una fuente futurista queda genial */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.author-bio {
+    font-size: 0.9rem;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+
+/* Ajuste de la imagen del autor para este estilo */
+.author-static .author-img {
+    filter: grayscale(100%); /* Efecto foto antigua/técnica */
+    border: 2px solid var(--f1-red);
+    border-radius: 0; /* Imagen cuadrada para romper con el resto */
+}
+
+.author-static .author-img:hover {
+    filter: grayscale(0%);
+    transform: rotate(-3deg);
 }

@@ -16,19 +16,6 @@ likeButtons.forEach(button => {
     });
 });
 
-function expandir(id) {
-    const elemento = document.getElementById(id);
-    const boton = event.target;
-
-    if (elemento.style.display === "block") {
-        elemento.style.display = "none";
-        boton.innerText = "Saber más";
-    } else {
-        elemento.style.display = "block";
-        boton.innerText = "Ver menos";
-    }
-}
-
 document.getElementById('searchInput').addEventListener('keyup', function() {
     // 1. Obtener el valor de búsqueda y convertirlo a minúsculas
     let filter = this.value.toLowerCase();
