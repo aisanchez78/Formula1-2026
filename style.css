@@ -274,3 +274,59 @@ blockquote cite {
     filter: grayscale(0%);
     transform: rotate(-3deg);
 }
+
+/* --- AJUSTES PARA MÓVILES Y TABLETS --- */
+
+@media (max-width: 992px) {
+    /* 1. Cambiamos el layout de columnas a una sola columna */
+    .content-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* 2. El lateral (autor) ahora ocupará todo el ancho y perderá el efecto 'sticky' */
+    .sidebar {
+        width: 100%;
+        max-width: none;
+        position: static; /* En móvil no queremos que flote, taparía contenido */
+        order: 2; /* Lo movemos al final, debajo de las noticias */
+        margin-top: 30px;
+    }
+
+    /* 3. El contenedor de noticias ocupará todo el ancho */
+    .grid-container {
+        width: 100%;
+        padding: 0;
+        order: 1;
+    }
+
+    /* 4. Ajustamos la cabecera fija para que no robe tanto espacio vertical */
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* 5. Ajustes específicos para móviles pequeños */
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola tarjeta por fila */
+    }
+
+    .hero-image {
+        height: 250px; /* Fotos de detalle más pequeñas */
+    }
+
+    #searchInput {
+        width: 90%; /* El buscador más ancho */
+    }
+    
+    .tech-table {
+        display: block;
+        overflow-x: auto; /* Permite deslizar la tabla si es muy ancha */
+        font-size: 0.85rem;
+    }
+}
