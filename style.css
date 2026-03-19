@@ -97,11 +97,21 @@ h2 {
     border-radius: 15px 15px 0 0;
 }
 
-.category {
+/* Contenedor para que las etiquetas salgan una al lado de la otra */
+.category-wrapper {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: #e10600; /* Rojo F1 */
+    display: flex;
+    gap: 5px; /* Espacio entre etiquetas */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.category {
+    top: 15px;
+    right: 15px;
+    background:  var(--f1-red);
     color: #fff;
     padding: 5px 12px;
     border-radius: 20px;
