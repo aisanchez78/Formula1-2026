@@ -339,3 +339,125 @@ blockquote cite {
         font-size: 0.85rem;
     }
 }
+
+/* Estilos del Formulario de Contacto */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.f1-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--dark-bg);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--f1-red);
+}
+
+.btn-submit {
+    background-color: var(--f1-red);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #b30500;
+    transform: translateY(-2px);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 0 10px;
+    }
+}
+
+/* --- ESTILOS PARA EL BOTÓN DE CONTACTO EN SIDEBAR --- */
+.btn-contact {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: var(--f1-red) !important;
+    border: 2px solid var(--f1-red);
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: var(--f1-red);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(225, 6, 0, 0.3);
+}
+
+/* --- ESTILOS PARA EL MENSAJE DE CONFIRMACIÓN (FLOTANTE) --- */
+.confirmation-msg {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999; /* Aumentamos el valor */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transform: translateY(150px); /* Empieza más abajo */
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.confirmation-msg.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.confirmation-msg .icon {
+    font-size: 1.3rem;
+}
+

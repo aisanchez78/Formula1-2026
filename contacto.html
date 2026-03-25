@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - F1 Tech Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="img/coche.jpg">
+</head>
+<body>
+    <header>    
+        <h1>CONTACTA CON EL PADDOCK</h1>
+        <p>¿Tienes dudas sobre el reglamento 2026? Escríbenos.</p>
+    </header>
+
+    <nav class="nav-simple">
+        <a href="index.html">← Volver al inicio</a>
+    </nav>
+
+    <main class="content-detail">
+        <section class="contact-container">
+            <h2>Enviar un mensaje</h2>
+            <p>Si eres un apasionado de la técnica o tienes una consulta sobre los e-fuels, rellena el siguiente formulario.</p>
+            
+            <form action="#" method="POST" class="f1-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto">
+                        <option value="motor">Unidades de Potencia</option>
+                        <option value="aero">Aerodinámica Activa</option>
+                        <option value="sostenibilidad">Sostenibilidad</option>
+                        <option value="otros">Otros asuntos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Tu consulta técnica</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar a Boxes</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 F1 Analysis Blog - Formulario de contacto</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
