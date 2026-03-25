@@ -45,7 +45,7 @@ const searchInput = document.getElementById('searchInput');
 
 /* --- SISTEMA DE CONFIRMACIÓN DE CONTACTO --- */
    
-const contactForm = document.querySelector('.f1-form');
+const contactForm = document.getElementById('f1-contact-form');
 if (contactForm) {
 contactForm.addEventListener('submit', function(event) {
         event.preventDefault(); 
